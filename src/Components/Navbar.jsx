@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { BsDiscord } from "react-icons/bs";
-import { IoMdAddCircleOutline } from "react-icons/io";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { GiSuspensionBridge } from "react-icons/gi";
 import logo from "../Assets/logo.svg";
-import Modal from "./Modal";
 
 const components = [
   { name: "Superchain", href: "/", status: true, icon: false },
@@ -15,8 +13,7 @@ const components = [
   { name: "More", href: "/create-pool", status: false, icon: false },
 ];
 
-const Navbar = () => {
-    const [modal,setModal] = useState(false);
+const Navbar = ({setModal}) => {
 
   return (
     <>
@@ -49,11 +46,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex space-x-4 items-center">
-          <button className="bg-[#436147] underline text-white lg:px-6 px-4 py-2 flex items-center space-x-2 rounded-full shadhow-xl lg:text-lg text-sm text-[15px]  font-[800]">
-            <IoMdAddCircleOutline className="text-white lg:text-xl text-sm"/>
-            <p onClick={() => setModal(true)}>Connect Wallet</p>
-          </button>
-          {modal && <Modal setModal={setModal}/>}
+         
           <button className=" lg:block hidden text-white text-2xl p-2">
             <BsDiscord />
           </button>
