@@ -50,7 +50,7 @@ const Navbar = () => {
 
         <div className="flex space-x-4 items-center">
           <button className="bg-[#436147] underline text-white lg:px-6 px-4 py-2 flex items-center space-x-2 rounded-full shadhow-xl lg:text-lg text-sm text-[15px]  font-[800]">
-            <IoMdAddCircleOutline className="text-white text-xl"/>
+            <IoMdAddCircleOutline className="text-white lg:text-xl text-sm"/>
             <p onClick={() => setModal(true)}>Connect Wallet</p>
           </button>
           {modal && <Modal setModal={setModal}/>}
